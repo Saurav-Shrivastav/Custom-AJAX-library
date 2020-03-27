@@ -1,24 +1,22 @@
 const http = new easyHTTP;
 
 // GET Posts:
-http.get('https://jsonplaceholder.typicode.com/posts', function(err, posts){
-  if(err){
+http.get('https://jsonplaceholder.typicode.com/posts', function(err, posts) {
+  if (err) {
     console.log(err);
-  }
-  else{
+  } else {
     console.log(posts);
   }
 });
 
 // GET Single Post:
-http.get('https://jsonplaceholder.typicode.com/posts/1', function(err, post){
-  if(err){
+http.get('https://jsonplaceholder.typicode.com/posts/1', function(err, post) {
+  if (err) {
     console.log(err);
-  }
-  else{
+  } else {
     console.log(post);
   }
-});         //The last number in the url here specifies the id of the post that we need.
+}); //The last number in the url here specifies the id of the post that we need.
 
 // Create Data to be posted:
 data = {
@@ -27,21 +25,28 @@ data = {
 };
 
 // POST request:
-http.post('https://jsonplaceholder.typicode.com/posts', data, function(err, post){
-  if(err){
+http.post('https://jsonplaceholder.typicode.com/posts', data, function(err, post) {
+  if (err) {
     console.log(err);
-  }
-  else{
+  } else {
     console.log(post);
   }
 });
 
 // UPDATE request:
-http.put('https://jsonplaceholder.typicode.com/posts/5', data, function(err, post){
-  if(err){
+http.put('https://jsonplaceholder.typicode.com/posts/5', data, function(err, post) {
+  if (err) {
     console.log(err);
-  }
-  else{
+  } else {
     console.log(post);
   }
-});       // The last number in the url here specifies the id of the post that we need to update. 
+}); // The last number in the url here specifies the id of the post that we need to update.
+
+// DELETE request:
+http.delete('https://jsonplaceholder.typicode.com/posts/1', function(err, response) {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log(response);
+  }
+}); // The last number in the url here specifies the id of the post that we need to delet.
