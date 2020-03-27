@@ -35,3 +35,13 @@ http.post('https://jsonplaceholder.typicode.com/posts', data, function(err, post
     console.log(post);
   }
 });
+
+// UPDATE request:
+http.put('https://jsonplaceholder.typicode.com/posts/5', data, function(err, post){
+  if(err){
+    console.log(err);
+  }
+  else{
+    console.log(post);
+  }
+});       // The last number in the url here specifies the id of the post that we need to update. 
