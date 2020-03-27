@@ -1,0 +1,9 @@
+h1{
+  border: solid 4px grey;
+  margin: none;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-family: Helvetica;
+  padding: 6px;
+}
